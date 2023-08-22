@@ -23,14 +23,23 @@ public class RepeatMode {
     private long id;
 
     @Column (
-
+            name = "type"
     )
     private RepeatModeType type;
 
+    @Column (
+            name = "repeatDays"
+    )
     private int repeatDays;
 
+    @Column (
+            name = "days"
+    )
     private List<DayOfWeek> days;
 
+    @Column (
+            name = "frequencyInADay"
+    )
     private int frequencyInADay;
 
     private static enum RepeatModeType {
