@@ -1,5 +1,6 @@
 package io.sankalp.habitstrackerapplication.entity;
 
+import io.sankalp.habitstrackerapplication.enums.RepeatModeType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -41,14 +42,5 @@ public class RepeatMode {
             name = "frequencyInADay"
     )
     private int frequencyInADay;
-
-    private static enum RepeatModeType {
-        DAILY,
-        FIXED,
-        FLEXIBLE;
-
-        private RepeatModeType () {
-        }
-    }
 
 }

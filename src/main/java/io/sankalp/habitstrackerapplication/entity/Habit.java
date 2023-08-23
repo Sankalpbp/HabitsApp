@@ -1,5 +1,6 @@
 package io.sankalp.habitstrackerapplication.entity;
 
+import io.sankalp.habitstrackerapplication.enums.Color;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -67,21 +68,4 @@ public class Habit {
     )
     private int consecutiveDaysGoal;
 
-    private static enum Color {
-        RED ( "#FF0000" ),
-        GREEN ( "#00FF00" ),
-        BLUE ( "0000FF" ),
-        ORANGE ( "FFA500" ),
-        BLUE_GREEN ( "088F8F" );
-
-        private final String hexCode;
-
-        private Color ( String hexCode ) {
-            this.hexCode = hexCode;
-        }
-
-        public String getHexCode () {
-            return this.hexCode;
-        }
-    }
 }
